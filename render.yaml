@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: 7-jade-valed
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /healthz
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
