@@ -81,9 +81,11 @@ header { text-align: center; padding: 4px 0 18px; color: var(--snow); }
 .wreath {
   --lz: 1; --h0: 32px;
   --logo: min(calc(var(--logo0) * var(--lz)), 86vw);
-  --ring: calc(var(--logo) * .673);
-  --hb: clamp(var(--h0), calc(var(--h0) * var(--lz)), calc(var(--h0) * 1.5));
-  position: relative; width: calc(var(--ring) * 2 + 48px); height: calc(var(--ring) * 2 + 48px); margin: 0 auto;
+  --ring: calc(var(--logo0) * .673);
+  --hb: var(--h0);
+  position: relative; margin: 0 auto;
+  width: max(calc(var(--ring) * 2 + 48px), calc(var(--logo) + 24px));
+  height: max(calc(var(--ring) * 2 + 48px), calc(var(--logo) + 24px));
 }
 .rh {
   position: absolute; left: 50%; top: 50%; width: var(--hs); height: var(--hs);
